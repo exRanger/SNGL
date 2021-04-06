@@ -1,0 +1,16 @@
+ .navbar {
+     display: flex;
+    justify-content: flex-end;
+    border: 1px solid rgb(58, 18, 18);
+ }
+ .navbar a {
+     text-decoration: none;
+     color: rgb(90, 92, 94);
+     font-family: sans-serif;
+     margin: 5px 30px;
+     font-size: 1.75rem;
+ }
+
+ a:hover{
+    
+ }

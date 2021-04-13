@@ -1,5 +1,15 @@
-import {createStore} from 'redux'
+import {applyMiddleware, createStore} from 'redux'
 import {reducers} from './reducers'
+import createSagaMiddleWare from 'redux-saga'
+import {watchLoadData} from '../saga/sagas'
 
+const saga = createSagaMiddleWare();
 
-export const store = createStore(reducers);
+const store = createStore(
+    reducers,
+    applyMiddleware(saga)    
+    );
+
+saga.run(watchLoadData)
+
+export {store}

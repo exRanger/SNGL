@@ -1,0 +1,44 @@
+.animate {
+    
+    transition: all .5s;
+    transform: translateX(3200px);    
+}
+.about{
+    
+    height: 100vh;
+    background: rgb(112, 51, 51);
+     
+    text-align: center;
+}
+.row {
+    display: flex;
+  }
+  
+  .block {
+    flex: 1;
+    margin: 10px;
+    background-color: rgb(230, 151, 78);
+    height: 300px;
+    border-radius: 15px;
+    transition: all .5s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  .block-right {
+    animation: fromRight .5s ease-out;
+  }
+  
+  .block-left {
+    animation: fromLeft .5s ease-out;
+  }
+  
+  
+  .animate .block-right {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  
+  .animate .block-left {
+    transform: translateX(-200px);
+    opacity: 0;
+  }

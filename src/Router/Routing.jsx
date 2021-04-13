@@ -2,7 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import {Main, About, Settings, NotFound} from '../pages'
 import {links} from '../constants/links'
-import { Navbar, Loader } from '../components'
+import { Navbar } from '../components'
 export const Routing = () => { 
     return (
          (

@@ -5,6 +5,7 @@ import { links } from '../../constants/links'
 import { Loader } from '../Loader'
 import { hideLoader, showLoader } from '../../store/animate/loader'
 import {useDispatch} from 'react-redux'
+import { startAnimate } from '../../store/animate/afterloader'
 
 export const Navbar = ()=>{
 
@@ -14,16 +15,28 @@ export const Navbar = ()=>{
     const handleClickLink = (links) => (e) => {
         e.preventDefault()
        
-        dispatch(showLoader(true))
-        setTimeout(()=> {
-            dispatch(hideLoader(false)) 
-            history.push(links)
-            
-        },150)
-        
-          
-            
          
+        dispatch(startAnimate(true))
+
+        // setTimeout(()=> {
+        //     
+        //     dispatch(startAnimate(false)) 
+        //     history.push(links)
+            
+        // },350)
+        dispatch(showLoader(true));
+        dispatch(startAnimate(true));
+
+        setTimeout(() => {
+            dispatch(hideLoader(false))
+            dispatch(startAnimate(false));
+            
+            history.push(links);
+            
+        }, 250 )
+        
+            
+    
        
         
     } 

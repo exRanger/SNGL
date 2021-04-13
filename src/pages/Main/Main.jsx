@@ -1,13 +1,32 @@
 import React from 'react'
-import {useSelector} from 'react-redux'
-import { Loader } from '../../components'
+import {useDispatch, useSelector} from 'react-redux'
+import { Loader, Animator } from '../../components'
+import { loadData } from '../../store/mock'
 import './Main.css'
 export const Main= () => {
+    const fetched = useSelector(state => state.fetchReducer.fetched)
     const {loading}= useSelector(state => state.loaderReducer)
+    const dispatch = useDispatch()
     if(loading){
-        return  <Loader/>
+        return <Loader/>
+           
     }
-    return (
-        <div className="main">Main Page</div>
+    
+    const handleClick  =  (e)  => {
+        dispatch(loadData())
+         console.log(fetched)
+    }
+  
+       return (
+        <Animator>
+             <div className="main">
+             <h1>Main Page</h1>
+
+              <button onClick={handleClick}>upload async</button> 
+               <div>
+                   {fetched.map((elem)=>{return <div key={elem.id}>{elem.title}</div>})}
+                </div>   
+            </div>
+         </Animator>
     )
 }

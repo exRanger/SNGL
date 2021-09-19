@@ -9,19 +9,16 @@ export const Main= () => {
     const dispatch = useDispatch()
     if(loading){
         return <Loader/>
-           
     }
     
     const handleClick  =  (e)  => {
         dispatch(loadData())
          console.log(fetched)
     }
-  
        return (
         <Animator>
              <div className="main">
              <h1>Main Page</h1>
-
               <button onClick={handleClick}>upload async</button> 
                <div>
                    {fetched.map((elem)=>{return <div key={elem.id}>{elem.title}</div>})}

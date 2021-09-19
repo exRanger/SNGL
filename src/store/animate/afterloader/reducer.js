@@ -4,7 +4,6 @@ const initialState = {
     isAnimate: false
 }
 
-
 export const animateReducer = (state = initialState, action) => {
     switch(action.type){
         case START_ANIMATE: return {...state, isAnimate: action.payload}

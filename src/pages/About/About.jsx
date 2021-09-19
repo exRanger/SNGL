@@ -2,8 +2,8 @@ import React from 'react'
 import { Loader, Animator } from '../../components'
 import {useSelector} from 'react-redux'
 import './About.css'
-export const About = () => {
 
+export const About = () => {
     const {loading}= useSelector(state => state.loaderReducer)
     if(loading){
         return <Loader/>

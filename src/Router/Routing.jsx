@@ -10,7 +10,7 @@ export const Routing = () => {
             <Router>
                 <Navbar/>
                 <Switch>
-                        <Route exact  path={links.main}>                   
+                        <Route exact path={links.main}>                   
                             <Main/>
                         </Route>
                         <Route path={links.about}>                        

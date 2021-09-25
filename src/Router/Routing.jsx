@@ -8,7 +8,6 @@ export const Routing = () => {
          (
             <Router>
                 <Navbar/>
-                
                 <Switch>
                         <Route exact  path={links.main}>                   
                             <Main/>

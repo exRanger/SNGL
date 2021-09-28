@@ -3,7 +3,8 @@ import {useSelector} from 'react-redux'
 import { Animator } from '../../components'
 import {Loader} from '../../components/Loader'
 export const Settings = () => {
-    const {loading}= useSelector(state => state.loaderReducer)
+    
+    const {loading} = useSelector(state => state.loaderReducer)
     
     if(loading){
         return <Loader/>       

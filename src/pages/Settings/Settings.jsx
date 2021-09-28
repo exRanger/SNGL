@@ -11,7 +11,7 @@ export const Settings = () => {
     }
     return (
         <Animator>
-                 <div className="settings">
+            <div className="settings">
             <div className="row">
                 <div className="block block-left"></div>
                 <div className="block block-left"></div>

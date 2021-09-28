@@ -6,8 +6,7 @@ export const Settings = () => {
     const {loading}= useSelector(state => state.loaderReducer)
     
     if(loading){
-        return <Loader/>
-           
+        return <Loader/>       
     }
     return (
         <Animator>

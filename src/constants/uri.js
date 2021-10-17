@@ -1,5 +1,5 @@
 //uri
-export const links = {
+export const uri = {
     about: "/about",
     settings: "/settings",
     main: '/'

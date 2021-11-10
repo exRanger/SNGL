@@ -8,7 +8,6 @@ function fetchData() {
  
 function* workerLoadData(){
     const data = yield call(fetchData)
-    console.log(data)
     yield put(putData(data))
 }
 

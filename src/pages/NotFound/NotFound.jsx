@@ -1,10 +1,13 @@
 import React from 'react'
 import './NotFound.css'
-export const NotFound = () => { 
+export const NotFound = ({codeError, errorInfo}) => { 
+                
+    codeError = codeError || 404 
+                          
     return (
-        <div className="not-found">
-            <h1>Page not found</h1>
-            <h2>Error 404</h2>
+        <div className="pageError">
+            <h1>{errorInfo}</h1>
+            <h2>Error {codeError}</h2>
         </div>
     )
 }

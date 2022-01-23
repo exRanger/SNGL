@@ -7,7 +7,7 @@ export const NotFound = ({codeError, errorInfo}) => {
     return (
         <div className="pageError">
             <h1>{errorInfo}</h1>
-            <h2>Error {codeError}</h2>
+            <h2>Error {coedeError}</h2>
         </div>
     )
 }

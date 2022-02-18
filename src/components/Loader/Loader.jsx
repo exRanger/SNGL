@@ -1,6 +1,7 @@
-  import React from 'react'
-  import {useSelector} from 'react-redux'
-  import './Loader.css'
+import React from 'react'
+import {useSelector} from 'react-redux'
+import './Loader.css'
+
 export const Loader = () => {
     const {loading} = useSelector(state => state.loaderReducer)
     console.log(loading)

@@ -14,31 +14,16 @@ export const Navbar = ()=>{
 
     const handleClickLink = (links) => (e) => {
         e.preventDefault()
-       
-         
+        
         dispatch(startAnimate(true))
-
-        // setTimeout(()=> {
-        //     
-        //     dispatch(startAnimate(false)) 
-        //     history.push(links)
-            
-        // },350)
         dispatch(showLoader(true));
         dispatch(startAnimate(true));
 
         setTimeout(() => {
             dispatch(hideLoader(false))
             dispatch(startAnimate(false));
-            
-            history.push(links);
-            
-        }, 250 )
-        
-            
-    
-       
-        
+            history.push(links);   
+        }, 250)    
     } 
 
     return (

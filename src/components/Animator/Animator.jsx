@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react' 
 import {useSelector} from 'react-redux'
-
 import './Animator.css'
+
 export const Animator = ({children}) => {
     const { isAnimate} = useSelector(state => state.animateReducer)
 

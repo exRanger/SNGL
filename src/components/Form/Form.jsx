@@ -11,12 +11,11 @@ class Form extends React.Component {
             surname: ''
         }
     }
-        onChangeHandler = (e) => {
+    onChangeHandler = (e) => {
             
-            this.setState( (prev) => ({
-                ...prev,
-                [e.target.name]: e.target.value
-            
+        this.setState((prev) => ({
+           ...prev,
+           [e.target.name]: e.target.value
             }))
         }
         submitHandler = (e) => {
@@ -51,9 +50,8 @@ class Form extends React.Component {
                 </form>
             )
         }
-    
 }
- 
+
 const mapDispatchToProps = {
      setProfile: profileActions.setProfile
 }

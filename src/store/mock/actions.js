@@ -8,10 +8,7 @@ export const putData = (data) => {
  }
 }
 export const loadData = () => { 
-    
-    return {
-        type: LOAD_DATA,
-         
-         
-    }
+ return {
+     type: LOAD_DATA,
+ }
 }

@@ -4,16 +4,13 @@ import './Loader.css'
 
 export const Loader = () => {
     const {loading} = useSelector(state => state.loaderReducer)
-    console.log(loading)
+
     if(loading){
-       
         return (
-            <div className="spinner-grow loader"   role="status">
+            <div className="spinner-grow loader" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>
-     )
-        }
-        return null
-     
-
+        )
+    }
+    return null
 }

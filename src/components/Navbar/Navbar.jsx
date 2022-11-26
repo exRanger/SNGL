@@ -1,13 +1,13 @@
 import React from 'react'
 import './Navbar.css'
 import {useHistory} from 'react-router-dom'
-import { links } from '../../constants/links'
-import { Loader } from '../Loader'
-import { hideLoader, showLoader } from '../../store/animate/loader'
+import {links} from '../../constants/links'
+import {Loader} from '../Loader'
+import {hideLoader, showLoader} from '../../store/animate/loader'
 import {useDispatch} from 'react-redux'
-import { startAnimate } from '../../store/animate/afterloader'
+import {startAnimate} from '../../store/animate/afterloader'
 
-export const Navbar = ()=>{
+export const Navbar = () => {
 
     const history = useHistory()
     const dispatch = useDispatch()
@@ -16,14 +16,14 @@ export const Navbar = ()=>{
         e.preventDefault()
         
         dispatch(startAnimate(true))
-        dispatch(showLoader(true));
-        dispatch(startAnimate(true));
+        dispatch(showLoader(true))
+        dispatch(startAnimate(true))
 
         setTimeout(() => {
             dispatch(hideLoader(false))
-            dispatch(startAnimate(false));
+            dispatch(startAnimate(false))
             history.push(links);   
-        }, 250)    
+        })    
     } 
 
     return (

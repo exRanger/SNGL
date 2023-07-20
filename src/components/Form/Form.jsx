@@ -5,18 +5,16 @@ import {profileActions} from '../../store/profile/actions'
 class Form extends React.Component {
     constructor(props){
         super(props)
-
         this.state = {
             name: '',
             surname: ''
         }
     }
-    onChangeHandler = (e) => {
-            
+    onChangeHandler = (e) => {   
         this.setState((prev) => ({
            ...prev,
            [e.target.name]: e.target.value
-            }))
+        }))
         }
         submitHandler = (e) => {
             const {name, surname} = this.state;

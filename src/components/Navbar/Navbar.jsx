@@ -8,13 +8,11 @@ import {useDispatch} from 'react-redux'
 import {startAnimate} from '../../store/animate/afterloader'
 
 export const Navbar = () => {
-
     const history = useHistory()
     const dispatch = useDispatch()
 
     const handleClickLink = (links) => (e) => {
         e.preventDefault()
-        
         dispatch(startAnimate(true))
         dispatch(showLoader(true))
         dispatch(startAnimate(true))
